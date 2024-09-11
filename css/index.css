@@ -1,0 +1,191 @@
+/* 通用样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  color: #002e5d;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero .container {
+  padding: 80px 0;
+}
+
+.hero h2 {
+  color: #fff;
+}
+
+.hero>.container {
+  background-repeat: no-repeat;
+  height: 100%
+}
+
+@media (min-width: 1024px) {
+  .hero>.container {
+      background-image:url(../img/header@2x.png);
+      background-position: 100%;
+      background-size: 650px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container,div>.container,section>.container,nav>.container,article.container,.usa-identifier__container {
+      padding-left:3.5rem;
+      padding-right: 3.5rem
+  }
+}
+
+
+h1, h2, h3 {
+  color: #002e5d;
+}
+
+/* 顶部导航 */
+header {
+  background-color: white;
+  padding: 20px 0 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 主体部分 */
+.hero {
+  background-color: #002e5d;
+  color: white;
+  /* padding: 80px 0; */
+  text-align: left;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: white;
+  color: #002e5d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #001f40;
+  color: white;
+}
+
+/* 服务部分 */
+.services {
+  padding: 60px 0;
+  text-align: left;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* 联系我们部分 */
+.contact {
+  background-color: #f1f1f1;
+  padding: 60px 0;
+  text-align: left;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* 页脚 */
+footer {
+  background-color: #002e5d;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+footer ul li a {
+  color: white;
+}
