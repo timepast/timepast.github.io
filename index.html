@@ -4,65 +4,307 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="企业建站和微信小程序设计服务">
-  <title>小桔子</title>
-  <link rel="stylesheet" href="css/index-1.css">
-</head> 
+  <title>雨溪建站 · Shopify 独立站搭建</title>
+  <meta name="description" content="海外 DTC 品牌级 Shopify 独立站一站式搭建：主题定制、产品上架、支付物流、SEO、营销工具集成与运营培训。">
+  <link rel="stylesheet" href="css/site.css">
+</head>
 
 <body>
 
-  <!-- 顶部导航 -->
-  <header>
+  <header class="header">
     <div class="container">
-      <h1>小桔子</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">首页</a></li>
-          <!-- <li><a href="#">服务</a></li>
-                <li><a href="#">案例</a></li> -->
-          <li><a href="about-us.html">关于我们</a></li>
-          <!-- <li><a href="#">联系我们</a></li> -->
-        </ul>
+      <a href="index.html" class="logo"><span class="logo-mark">R</span>雨溪建站</a>
+      <nav class="nav">
+        <a href="#services">服务内容</a>
+        <a href="#works">项目经历</a>
+        <a href="#process">流程</a>
+        <a href="#plans">套餐</a>
+        <a href="#faq">常见问题</a>
+        <a href="#contact" class="btn btn--primary">免费咨询</a>
       </nav>
     </div>
   </header>
 
-  <!-- 主体内容 -->
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h2>轻松说英语</h2>
-      <p>每天20分钟，轻松学会流利英语！无论你是零基础还是想提升口语水平，我们的课程都能让你在趣味中掌握英语。一起开始你的英语学习之旅吧，简单、有效、有趣！</p>
+      <span class="eyebrow">Shopify 独立站 · 一站式搭建</span>
+      <h1>用海外品牌大站的标准，<br>帮你搭一个<em>能卖货</em>的独立站</h1>
+      <p>作为开发人员参与过北美、欧洲消费品牌官网的开发。从选模板、上产品、接支付物流，到 SEO 和营销工具，一站式交付，上线后教你自己运营。</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn--primary">预约免费咨询</a>
+        <a href="#works" class="btn btn--ghost">查看项目经历 →</a>
+      </div>
+      <div class="hero-tags">
+        <span class="tag">Shopify</span>
+        <span class="tag">WordPress 多语言</span>
+        <span class="tag">主题定制开发</span>
+        <span class="tag">转化率优化</span>
+        <span class="tag">SEO 框架</span>
+      </div>
+
     </div>
   </section>
 
-  <section class="services">
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><b>双平台</b><span>Shopify + WordPress 开发经验</span></div>
+      <div class="stat"><b>多语言</b><span>多国家、多币种站点经验</span></div>
+      <div class="stat"><b>20+</b><span>支付 / 营销 / 客服应用接触经验</span></div>
+      <div class="stat"><b>双端</b><span>PC + 手机端逐页适配</span></div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="section" id="services">
     <div class="container">
-      <h2>学习内容</h2>
-      <div class="service-cards">
-        <div class="service-card">
-          <h3>自然拼读</h3>
-          <p>轻松掌握自然拼读，告别死记硬背，让孩子像母语者一样流利阅读！从字母到单词，开启英语学习的快乐旅程。</p>
+      <div class="section-head">
+        <span class="eyebrow">服务内容</span>
+        <h2 class="section-title">从搭建到上线，覆盖建站的主要环节</h2>
+        <p class="section-desc">不只是把模板装上，而是按品牌站的做法，把影响转化的每个环节都配置到位。</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">01</div>
+          <h3>模板选型与主题定制</h3>
+          <p>基于 Shopify 2.0 高级付费模板，按品牌调性定制首页、集合页、详情页，需要时做独立模块开发。</p>
         </div>
-        <div class="service-card">
-          <h3>对话练习输出</h3>
-          <p>用真实对话练习英语，提升听说能力，让每一次对话都成为进步的阶梯！简单有趣，轻松自信开口说英语。</p>
+        <div class="card">
+          <div class="card-icon">02</div>
+          <h3>产品上架与详情页优化</h3>
+          <p>产品、变体、规格参数、配件推荐一次整理好。详情页按用户决策路径排布卖点、评价和购买按钮。</p>
         </div>
-          <div class="service-card">
-            <h3>海量内容输入</h3>
-            <p>海量原汁原味的英语内容输入，让你沉浸在真实语境中，快速提升语言感知力。不背单词、不学语法，自然而然掌握英语！</p>
-          </div>
+        <div class="card">
+          <div class="card-icon">03</div>
+          <h3>视觉素材设计</h3>
+          <p>首页 Banner（PC + 手机端分别设计）、分类图、卖点图标，保证整站视觉统一。</p>
         </div>
+        <div class="card">
+          <div class="card-icon">04</div>
+          <h3>支付与物流配置</h3>
+          <p>PayPal、信用卡、分期付款（Affirm / Klarna 等）接入；全球发货区域、运费模板、税费设置。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">05</div>
+          <h3>域名、SSL 与合规</h3>
+          <p>域名解析与证书配置；退换货、隐私、质保等政策页；面向欧洲市场的 Cookie 同意与 GDPR 合规。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">06</div>
+          <h3>SEO 关键词框架</h3>
+          <p>围绕核心关键词搭建全站标题、描述、URL 和结构化数据，页面速度和移动端体验一并优化。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">07</div>
+          <h3>营销工具集成</h3>
+          <p>邮件 / 短信营销、会员积分、商品评价、到货提醒、在线客服等常用应用的选型与配置。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">08</div>
+          <h3>数据追踪埋点</h3>
+          <p>GA4、GTM、Meta Pixel 等广告与分析代码部署，上线第一天就能看清流量从哪来、在哪流失。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">09</div>
+          <h3>运营培训与答疑</h3>
+          <p>一对一线上教学：怎么上新、改首页、做活动、看数据。上线后有问题随时沟通。</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 页脚 -->
-  <footer>
+  <!-- Works -->
+  <section class="section section--soft" id="works">
     <div class="container">
-      <p>&copy; 2024 小桔子. 版权所有.</p>
-      <ul>
-        <li><a href="#">隐私政策</a></li>
-        <li><a href="#">服务条款</a></li>
-      </ul>
+      <div class="section-head">
+        <span class="eyebrow">项目经历</span>
+        <h2 class="section-title">参与开发的品牌官网</h2>
+        <p class="section-desc">以下是我作为开发人员参与过的两个海外品牌官网项目。为保护品牌方信息，项目已做匿名化处理。配图来自我按项目功能思路重新设计的概念演示站，品牌均为虚构，可以在线打开体验。</p>
+      </div>
+
+      <article class="case">
+        <a href="works/project-a.html" class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span>orvik · 商品详情页（概念演示）</span></div>
+          <img src="img/concepts/orvik-pdp.jpg" alt="项目 A 概念演示：商品详情页">
+        </a>
+        <div>
+          <div class="case-meta">项目 A · 北美 · Shopify</div>
+          <h3>北美出行类 DTC 品牌站</h3>
+          <p>高客单价出行产品品牌，线上直销与线下经销门店并行。我在项目中参与站点开发。</p>
+          <ul>
+            <li>基于付费主题深度定制，持续迭代上线</li>
+            <li>详情页整合配置选择、配件加购、型号对比、尺码工具</li>
+            <li>接入分期付款、积分会员、评价、短信营销等应用</li>
+            <li>线上下单与附近门店购买两条购买路径</li>
+          </ul>
+          <a href="works/project-a.html" class="btn btn--primary">查看项目详情 →</a><a href="concepts/orvik/index.html" class="case-demo" target="_blank" rel="noopener">体验演示站 ↗</a>
+        </div>
+      </article>
+
+      <article class="case">
+        <a href="works/project-b.html" class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span>solenne · 选择国家（概念演示）</span></div>
+          <img src="img/concepts/solenne-country.jpg" alt="项目 B 概念演示：国家与币种选择">
+        </a>
+        <div>
+          <div class="case-meta">项目 B · 欧洲 · WordPress</div>
+          <h3>欧洲高端出行品牌官网</h3>
+          <p>高端出行产品品牌，产品销往多个国家和地区。我在项目中参与站点开发。</p>
+          <ul>
+            <li>多语言官网，统一在一个站点中管理</li>
+            <li>按国家切换币种、配送范围与可售商品</li>
+            <li>沉浸式产品讲解：爆炸图、卖点热点、全屏视觉</li>
+            <li>Cookie 同意管理，满足欧洲 GDPR 要求</li>
+          </ul>
+          <a href="works/project-b.html" class="btn btn--primary">查看项目详情 →</a><a href="concepts/solenne/index.html" class="case-demo" target="_blank" rel="noopener">体验演示站 ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section--dark" id="process">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" style="color:#5fd39c">合作流程</span>
+        <h2 class="section-title">五步上线，每一步你都清楚进度</h2>
+        <p class="section-desc">需求确认后排期开工，每个阶段结束都会给你预览链接确认。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>需求沟通</h3>
+          <p>了解品类、目标市场、预算和参考站，给出建站方案。</p>
+        </div>
+        <div class="step">
+          <h3>方案与模板</h3>
+          <p>确定页面结构、模板和所需应用，签约排期。</p>
+        </div>
+        <div class="step">
+          <h3>设计与搭建</h3>
+          <p>视觉设计、主题定制、产品上架，PC 与手机端同步完成。</p>
+        </div>
+        <div class="step">
+          <h3>配置与测试</h3>
+          <p>支付、物流、税费、埋点逐项配置，并走通真实下单流程。</p>
+        </div>
+        <div class="step">
+          <h3>上线与培训</h3>
+          <p>绑定域名正式上线，一对一培训，上线后持续答疑。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section class="section" id="plans">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">服务套餐</span>
+        <h2 class="section-title">按你的阶段选择</h2>
+        <p class="section-desc">具体报价按品类、产品数量和定制需求评估，欢迎咨询。</p>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <h3>起步版</h3>
+          <p class="plan-fit">适合第一次做独立站的卖家</p>
+          <p class="plan-price">咨询报价</p>
+          <ul>
+            <li>Shopify 2.0 付费模板搭建</li>
+            <li>上架 10 款产品</li>
+            <li>首页 Banner ×2（PC + 手机）</li>
+            <li>支付、物流、域名与 SSL</li>
+            <li>政策页与基础 SEO</li>
+            <li>一对一使用培训</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost">咨询起步版</a>
+        </div>
+        <div class="plan plan--hot">
+          <h3>品牌版</h3>
+          <p class="plan-fit">适合有品牌定位、要做转化的卖家</p>
+          <p class="plan-price">咨询报价</p>
+          <ul>
+            <li>包含起步版全部内容</li>
+            <li>首页与详情页定制设计</li>
+            <li>上架 30 款产品</li>
+            <li>全站 SEO 关键词框架</li>
+            <li>邮件、评价、会员等营销应用配置</li>
+            <li>GA4 / Pixel 数据埋点</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary">咨询品牌版</a>
+        </div>
+        <div class="plan">
+          <h3>定制版</h3>
+          <p class="plan-fit">适合多市场、多语言的成熟品牌</p>
+          <p class="plan-price">按需评估</p>
+          <ul>
+            <li>主题模块定制开发</li>
+            <li>多语言、多币种、多站点</li>
+            <li>车型对比、尺码工具等复杂交互</li>
+            <li>第三方系统与应用对接</li>
+            <li>页面速度与转化率专项优化</li>
+            <li>上线后持续迭代维护</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost">咨询定制版</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--soft" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">常见问题</span>
+        <h2 class="section-title">建站前你可能想问</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>建一个站需要多长时间？</summary>
+          <p>起步版一般 2–3 周，品牌版 3–5 周，定制版视需求评估。前提是产品图文素材已经准备好，素材越齐全，上线越快。</p>
+        </details>
+        <details>
+          <summary>我需要准备什么？</summary>
+          <p>Shopify 账号（我们可以协助注册）、域名、产品图片与文案、收款账号信息，以及你喜欢的参考网站。不确定的地方沟通时我们会逐项列清单。</p>
+        </details>
+        <details>
+          <summary>模板和应用的费用包含在内吗？</summary>
+          <p>Shopify 月费、付费模板和第三方应用的订阅费由店铺主体直接支付给官方，我们负责选型和配置，并会提前告诉你每一项的大致费用。</p>
+        </details>
+        <details>
+          <summary>上线后我自己能改吗？</summary>
+          <p>可以。我们基于 Shopify 2.0 的可视化编辑来搭建，上线时会一对一培训，日常改图、改文案、上新品都能自己完成。</p>
+        </details>
+        <details>
+          <summary>只做 Shopify 吗？</summary>
+          <p>以 Shopify 为主。如果你的业务更适合内容型官网或需要复杂的多语言结构，也可以用 WordPress 搭建，项目 B 就是用 WordPress 搭建的。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section--dark" id="contact">
+    <div class="container contact">
+      <div>
+        <span class="eyebrow" style="color:#5fd39c">联系我们</span>
+        <h2 class="section-title">聊聊你的独立站</h2>
+        <p class="section-desc">告诉我们你的品类、目标市场和参考网站，免费给出建站建议和报价。我们主打慢工出细活，名额有限，需要排期。</p>
+        <div class="contact-list">
+          <div><span>邮箱</span><a href="mailto:cezo@raincreek.cn">cezo@raincreek.cn</a></div>
+          <div><span>微信</span>扫描右侧二维码添加</div>
+        </div>
+      </div>
+      <div class="qr">
+        <div class="qr-box">微信二维码（待替换）</div>
+        <p>添加请备注"建站"</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© 2026 雨溪建站 raincreek.cn</span>
+      <span>项目经历已做匿名化处理</span>
     </div>
   </footer>
 

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Metro 3 Electric Bike — ORVIK Concept Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="orvik.css">
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h11l2-8H6.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="19.5" r="1.5" fill="currentColor"/><circle cx="17" cy="19.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="k-motor" viewBox="0 0 34 34"><circle cx="17" cy="17" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19 7l-7 11h5l-2 9 7-11h-5z" fill="currentColor"/></symbol>
+    <symbol id="k-range" viewBox="0 0 34 34"><rect x="3" y="10" width="25" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="28" y="14" width="3" height="6" rx="1" fill="currentColor"/><path d="M7 14h4v6H7zM13 14h4v6h-4zM19 14h4v6h-4z" fill="currentColor"/></symbol>
+    <symbol id="k-speed" viewBox="0 0 34 34"><path d="M5 24a12 12 0 1 1 24 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 24l6-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="17" cy="24" r="2.2" fill="currentColor"/></symbol>
+    <symbol id="k-frame" viewBox="0 0 34 34"><circle cx="8" cy="23" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="23" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 23l6-11h9l3 11M14 12l4 11h-10M21 8h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="k-brake" viewBox="0 0 34 34"><circle cx="17" cy="17" r="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 5v4M17 25v4M5 17h4M25 17h4" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="k-app" viewBox="0 0 34 34"><rect x="10" y="3" width="14" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 26h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M13 11h8M13 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <div class="promo">
+    <div class="wrap">
+      <span>FALL RIDE EVENT · <b>$300 OFF</b> METRO 3 THIS WEEK</span>
+    </div>
+  </div>
+
+  <header class="hd">
+    <div class="wrap">
+      <button class="burger" aria-label="Menu"><svg width="24" height="24"><use href="#i-menu"/></svg></button>
+      <a href="index.html" class="logo">ORV<i>I</i>K</a>
+      <ul class="menu">
+        <li><a href="index.html">E-Bikes ▾</a></li>
+        <li><a href="#">Accessories ▾</a></li>
+        <li><a href="index.html#tech">Ride Tech</a></li>
+        <li><a href="index.html#stores">Find a Store</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <div class="tools">
+        <a href="#" aria-label="Search"><svg><use href="#i-search"/></svg></a>
+        <a href="#" class="acct" aria-label="Account"><svg><use href="#i-user"/></svg></a>
+        <a href="#" class="cart" aria-label="Cart"><svg><use href="#i-cart"/></svg><em id="cart-n">0</em></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="crumb"><a href="index.html">Home</a> / <a href="index.html">E-Bikes</a> / Metro 3</div>
+    <div class="pdp">
+      <div class="gallery">
+        <div class="main">
+          <span class="badge">CITY</span>
+          <img id="main-img" src="../img/bike-brick.jpg" alt="Metro 3">
+          <span class="count" id="img-count">1 / 5</span>
+        </div>
+        <div class="thumbs">
+          <button class="on"><img src="../img/bike-brick.jpg" alt=""></button>
+          <button><img src="../img/bike-whitewall.jpg" alt=""></button>
+          <button><img src="../img/bike-flowers.jpg" alt=""></button>
+          <button><img src="../img/bike-lane.jpg" alt=""></button>
+          <button><img src="../img/bike-handlebar.jpg" alt=""></button>
+        </div>
+        <div class="keyspecs">
+          <div><svg><use href="#k-motor"/></svg><span><small>Motor</small><b>750W peak · 85 Nm</b></span></div>
+          <div><svg><use href="#k-range"/></svg><span><small>Range</small><b id="spec-range">Up to 60 mi</b></span></div>
+          <div><svg><use href="#k-speed"/></svg><span><small>Top speed</small><b>28 mph · Class 3</b></span></div>
+          <div><svg><use href="#k-frame"/></svg><span><small>Frame</small><b>6061 aluminum</b></span></div>
+          <div><svg><use href="#k-brake"/></svg><span><small>Brakes</small><b>4-piston hydraulic</b></span></div>
+          <div><svg><use href="#k-app"/></svg><span><small>Smart</small><b>GPS · App lock</b></span></div>
+        </div>
+        <div class="trust"><span>2-yr warranty</span><span>UL 2849 certified</span><span>30-day returns</span><span>Free shipping</span></div>
+      </div>
+
+      <div class="buy">
+        <h1>Metro 3</h1>
+        <p class="sub">The everyday e-bike, re-engineered.</p>
+        <div class="rating"><span class="stars" style="color:var(--accent)">★★★★★</span><b>4.8</b><a href="#">212 reviews</a></div>
+        <div class="price"><span id="price">$1,799</span><s id="was">$2,099</s></div>
+        <p class="finance">or <b id="monthly">$75/mo</b> for 24 months at 0% APR. <a href="#" style="text-decoration:underline">Check your rate</a></p>
+
+        <div class="opt">
+          <div class="opt-label"><span><b>Trim:</b> <span id="trim-name">Standard</span></span></div>
+          <div class="seg" id="trim">
+            <button class="on" data-add="0" data-range="Up to 60 mi" data-name="Standard">Standard<small>500 Wh battery</small></button>
+            <button data-add="300" data-range="Up to 85 mi" data-name="Plus">Plus<small>720 Wh · +$300</small></button>
+            <button class="cmp" onclick="toast('Opening side-by-side comparison')">Compare</button>
+          </div>
+        </div>
+
+        <div class="opt">
+          <div class="opt-label"><span><b>Frame size:</b> <span id="size-name">M · 5'6" – 6'0"</span></span><a href="#" onclick="event.preventDefault();toast('Size guide: enter your height to get a recommendation')">Find my size</a></div>
+          <div class="sizes" id="size">
+            <button data-name="S · 5'2&quot; – 5'6&quot;">S</button>
+            <button class="on" data-name="M · 5'6&quot; – 6'0&quot;">M</button>
+            <button data-name="L · 6'0&quot; – 6'4&quot;">L</button>
+            <button class="tool" data-tool>Step-through</button>
+          </div>
+        </div>
+
+        <div class="opt">
+          <div class="opt-label"><span><b>Color:</b> <span id="color-name">Graphite</span></span></div>
+          <div class="swatches" id="color">
+            <button class="on" style="background:#2b2e33" data-name="Graphite" aria-label="Graphite"></button>
+            <button style="background:#8fa593" data-name="Sage" aria-label="Sage"></button>
+            <button style="background:#d9cbb3" data-name="Sand" aria-label="Sand"></button>
+          </div>
+        </div>
+
+        <div class="opt acc">
+          <h4>Complete your ride</h4>
+          <label><input type="checkbox" data-price="89"><img src="../img/bike-flowers.jpg" alt=""><div>Rear cargo rack<small>Holds up to 55 lb</small></div><b>+$89</b></label>
+          <label><input type="checkbox" data-price="449"><img src="../img/bike-handlebar.jpg" alt=""><div>Spare battery<small>Double your range</small></div><b>+$449</b></label>
+          <label><input type="checkbox" data-price="59"><img src="../img/bike-street.jpg" alt=""><div>Folding lock<small>Sold Secure Gold</small></div><b>+$59</b></label>
+        </div>
+
+        <div class="cta">
+          <button class="btn btn-accent" id="add">Add to cart · <span id="total">$1,799</span></button>
+          <button class="btn btn-line" onclick="toast('Showing dealers with Metro 3 in stock near you')">Find it at a local dealer</button>
+        </div>
+        <p class="ship">✓ In stock · Ships in 2–4 business days</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="ft">
+    <div class="wrap">
+      <div class="ft-bot" style="margin-top:0;border-top:0;padding-top:0"><span>© 2026 ORVIK Electric Bikes. Fictional brand for demo purposes.</span><span>Privacy · Terms · Accessibility · Cookie settings</span></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <div class="concept">概念演示 · ORVIK 为虚构品牌<a href="../../works/project-a.html">返回作品集 →</a></div>
+
+  <script>
+    const BASE = 1799, WAS = 2099;
+    const $ = s => document.querySelector(s);
+    const fmt = n => '$' + n.toLocaleString('en-US');
+    function pick(group, cb) {
+      group.querySelectorAll('button:not(.cmp):not([data-tool])').forEach(b => b.addEventListener('click', () => {
+        group.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+        cb(b); update();
+      }));
+    }
+    function update() {
+      const trim = +$('#trim .on').dataset.add;
+      const acc = [...document.querySelectorAll('.acc input:checked')].reduce((s, i) => s + +i.dataset.price, 0);
+      const bike = BASE + trim;
+      $('#price').textContent = fmt(bike);
+      $('#was').textContent = fmt(WAS + trim);
+      $('#monthly').textContent = fmt(Math.round(bike / 24)) + '/mo';
+      $('#total').textContent = fmt(bike + acc);
+    }
+    pick($('#trim'), b => { $('#trim-name').textContent = b.dataset.name; $('#spec-range').textContent = b.dataset.range; });
+    pick($('#size'), b => $('#size-name').textContent = b.dataset.name);
+    pick($('#color'), b => $('#color-name').textContent = b.dataset.name);
+    document.querySelectorAll('.acc input').forEach(i => i.addEventListener('change', update));
+    document.querySelector('[data-tool]').onclick = e => e.currentTarget.classList.toggle('on');
+    const thumbs = document.querySelectorAll('.thumbs button');
+    thumbs.forEach((t, i) => t.onclick = () => {
+      thumbs.forEach(x => x.classList.toggle('on', x === t));
+      $('#main-img').src = t.querySelector('img').src;
+      $('#img-count').textContent = (i + 1) + ' / ' + thumbs.length;
+    });
+    let n = 0;
+    $('#add').onclick = () => { n++; $('#cart-n').textContent = n; toast('Added to cart: Metro 3 ' + $('#trim-name').textContent + ', ' + $('#color-name').textContent); };
+    function toast(msg) {
+      const t = $('#toast');
+      t.textContent = msg; t.classList.add('show');
+      clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2200);
+    }
+    update();
+  </script>
+</body>
+
+</html>

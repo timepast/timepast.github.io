@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>SOLENNE — Concept Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink: #0d0e10; --paper: #f6f3ee; --muted: #8c8a86; --line: rgba(255,255,255,.14); --brass: #c7a36a; --serif: "Cormorant Garamond", Georgia, serif; --sans: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--ink); color: #fff; font-family: var(--sans); font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+
+    .hd { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; padding: 0 16px 0 40px; height: 76px; transition: background .3s; }
+    .hd.solid { background: rgba(13,14,16,.92); backdrop-filter: blur(10px); }
+    .logo { font-family: var(--serif); font-size: 28px; letter-spacing: .32em; font-weight: 500; }
+    .logo small { font-family: var(--sans); font-size: 11px; letter-spacing: .2em; color: var(--muted); margin-left: 14px; vertical-align: middle; }
+    .hd-r { display: flex; align-items: stretch; height: 100%; }
+    .hd-r > * { display: flex; align-items: center; padding: 0 24px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+    .lang { position: relative; }
+    .lang ul { position: absolute; top: 76px; right: 0; background: #16181b; border: 1px solid var(--line); list-style: none; min-width: 170px; display: none; }
+    .lang.open ul { display: block; }
+    .lang li button { width: 100%; text-align: left; padding: 12px 18px; font-size: 13px; letter-spacing: .06em; text-transform: none; }
+    .lang li button:hover, .lang li button.on { background: rgba(255,255,255,.06); color: var(--brass); }
+    .shop { background: var(--brass); color: var(--ink); font-weight: 600; align-self: center; height: 42px; border-radius: 999px; margin: 0 8px; }
+    .burger { width: 76px; justify-content: center; padding: 0 !important; font-size: 18px; }
+
+    .hero { position: relative; height: 100vh; min-height: 640px; overflow: hidden; }
+    .hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.55) saturate(.9); }
+    .hero-c { position: absolute; inset: auto 0 12vh 0; text-align: center; padding: 0 24px; }
+    .hero-c p { font-size: 15px; letter-spacing: .28em; text-transform: uppercase; color: rgba(255,255,255,.8); }
+    .hero-c h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(46px, 7vw, 104px); line-height: 1.02; margin-top: 16px; letter-spacing: -.01em; }
+    .hero-c h1 em { color: var(--brass); }
+    .scroll { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); font-size: 11px; letter-spacing: .3em; color: rgba(255,255,255,.6); }
+
+    .chapter { display: grid; grid-template-columns: 1.1fr 1fr; min-height: 90vh; }
+    .chapter.rev > :first-child { order: 2; }
+    .chapter .pic { overflow: hidden; }
+    .chapter .pic img { width: 100%; height: 100%; object-fit: cover; }
+    .chapter .txt { display: flex; flex-direction: column; justify-content: center; padding: 80px 8vw; }
+    .num { font-family: var(--serif); font-style: italic; color: var(--brass); font-size: 22px; }
+    .chapter h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(38px, 4.4vw, 64px); line-height: 1.05; margin: 12px 0 22px; }
+    .chapter p { color: rgba(255,255,255,.72); font-size: 17px; max-width: 460px; }
+    .light { background: var(--paper); color: var(--ink); }
+    .light p { color: #4b4a47; }
+    details.more { margin-top: 30px; max-width: 460px; }
+    details.more summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+    details.more summary::-webkit-details-marker { display: none; }
+    .switch { width: 38px; height: 20px; border-radius: 10px; background: rgba(0,0,0,.18); position: relative; transition: background .2s; }
+    .switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: left .2s; }
+    details[open] .switch { background: var(--brass); }
+    details[open] .switch::after { left: 21px; }
+    details.more dl { margin-top: 20px; display: grid; grid-template-columns: auto 1fr; gap: 10px 24px; font-size: 15px; }
+    details.more dt { color: var(--muted); }
+
+    .explode { position: relative; background: #121316; padding: 110px 0 120px; }
+    .explode-head { text-align: center; margin-bottom: 56px; }
+    .explode-head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(36px, 4vw, 58px); }
+    .explode-head p { color: rgba(255,255,255,.65); margin-top: 8px; }
+    .stage { position: relative; max-width: 1060px; margin: 0 auto; border-radius: 4px; overflow: hidden; }
+    .stage-img { position: relative; }
+    .stage img { width: 100%; filter: grayscale(.25) brightness(.9); }
+    .hot { position: absolute; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; background: var(--brass); color: var(--ink); font-size: 22px; font-weight: 400; display: grid; place-items: center; box-shadow: 0 0 0 8px rgba(199,163,106,.25); transition: transform .2s; }
+    .hot:hover, .hot.on { transform: scale(1.1); }
+    .hot.on { background: #fff; }
+    .pop { position: absolute; width: 280px; background: rgba(13,14,16,.94); border: 1px solid var(--line); padding: 20px 22px; font-size: 14px; display: none; }
+    .pop.on { display: block; }
+    .pop b { display: block; font-family: var(--serif); font-size: 24px; font-weight: 500; margin-bottom: 6px; }
+    .pop span { color: rgba(255,255,255,.7); }
+
+    .band { position: relative; height: 80vh; min-height: 480px; }
+    .band img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.7); }
+    .band div { position: absolute; left: 8vw; bottom: 10vh; }
+    .band h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(44px, 6vw, 88px); line-height: 1; }
+    .band p { margin-top: 14px; color: rgba(255,255,255,.8); letter-spacing: .08em; }
+
+    .ft { padding: 70px 0 40px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+    .ft .wrap { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: flex-end; }
+    .ft .logo { color: #fff; }
+
+    .ride { position: fixed; right: 18px; top: 50%; transform: translateY(-50%) rotate(180deg); writing-mode: vertical-rl; z-index: 25; background: var(--brass); color: var(--ink); padding: 22px 12px; border-radius: 26px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+
+    .modal { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.6); backdrop-filter: blur(3px); display: none; align-items: center; justify-content: center; padding: 16px; }
+    .modal.on { display: flex; }
+    .box { width: min(520px, 100%); max-height: 86vh; display: flex; flex-direction: column; background: var(--paper); color: var(--ink); padding: 36px 36px 24px; position: relative; }
+    .box .x { position: absolute; top: 14px; right: 18px; font-size: 26px; color: #666; }
+    .box h3 { font-family: var(--serif); font-weight: 500; font-size: 34px; letter-spacing: .06em; }
+    .box h3 span { color: var(--brass); font-style: italic; letter-spacing: 0; }
+    .box > p { color: #55534f; font-size: 15px; margin: 8px 0 18px; }
+    .box input { width: 100%; height: 46px; border: 1px solid #d4cfc6; background: #fff; padding: 0 14px; font: inherit; font-size: 15px; outline: none; }
+    .box input:focus { border-color: var(--ink); }
+    .list { list-style: none; margin-top: 10px; overflow-y: auto; }
+    .list button { width: 100%; display: grid; grid-template-columns: 30px 1fr auto 20px; align-items: center; gap: 10px; padding: 13px 4px; border-bottom: 1px solid #e3ded5; text-align: left; font-size: 15px; font-weight: 400; }
+    .list button:hover { background: #efebe4; }
+    .list .flag { width: 22px; height: 22px; border-radius: 50%; overflow: hidden; display: grid; grid-template-columns: 1fr; }
+    .list .cur { color: #77736c; font-size: 14px; }
+    .list .ok { color: var(--ink); font-weight: 600; }
+    .list .na { color: #a29e97; }
+    .box small { display: block; margin-top: 14px; color: #7a766f; font-size: 13px; }
+
+    .toast { position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 120px); background: #fff; color: var(--ink); padding: 14px 22px; font-size: 14px; z-index: 60; transition: transform .3s, opacity .3s; opacity: 0; visibility: hidden; }
+    .toast.show { transform: translate(-50%, 0); opacity: 1; visibility: visible; }
+    .concept { position: fixed; left: 16px; bottom: 16px; z-index: 70; background: rgba(255,255,255,.94); color: #111; font-size: 12px; padding: 8px 12px; border-radius: 999px; font-family: -apple-system, "PingFang SC", sans-serif; font-weight: 400; }
+    .concept a { color: #9a7338; margin-left: 6px; }
+
+    @media (max-width: 900px) {
+      .hd { padding-left: 20px; height: 64px; }
+      .logo { font-size: 22px; }
+      .logo small, .hd-r .lang { display: none; }
+      .hd-r > * { padding: 0 16px; }
+      .burger { width: 64px; }
+      .lang ul { top: 64px; }
+      .chapter { grid-template-columns: 1fr; min-height: 0; }
+      .chapter.rev > :first-child { order: 0; }
+      .chapter .pic { height: 56vh; }
+      .chapter .txt { padding: 56px 24px 64px; }
+      .explode { padding: 72px 0 80px; }
+      .stage { margin: 0 16px; }
+      .shop { white-space: nowrap; height: 38px; padding: 0 16px !important; font-size: 12px !important; }
+      .pop { position: relative; left: auto !important; top: auto !important; width: auto; border: 0; border-top: 1px solid var(--line); padding: 18px 4px 0; background: transparent; }
+      .stage { overflow: visible; }
+      .ride { writing-mode: horizontal-tb; transform: none; top: auto; bottom: 16px; right: 16px; padding: 12px 18px; font-size: 12px; }
+      .band div { left: 24px; right: 24px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hd" id="hd">
+    <a href="index.html" class="logo">SOLENNE<small>Studio · Copenhagen</small></a>
+    <div class="hd-r">
+      <div class="lang" id="lang">
+        <button id="lang-btn">EN ▾</button>
+        <ul>
+          <li><button class="on" data-l="en">English</button></li>
+          <li><button data-l="de">Deutsch</button></li>
+          <li><button data-l="fr">Français</button></li>
+          <li><button data-l="nl">Nederlands</button></li>
+          <li><button data-l="sv">Svenska</button></li>
+        </ul>
+      </div>
+      <button class="shop" id="shop-btn">Shop · <span id="cur">USD $</span></button>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="../img/winding-road.jpg" alt="Coastal road at dusk">
+    <div class="hero-c">
+      <p data-i="kick">Made for the way cities move.</p>
+      <h1 data-i="title">Quiet power, <em>beautifully</em> made.</h1>
+    </div>
+    <span class="scroll">SCROLL</span>
+  </section>
+
+  <section class="chapter light">
+    <div class="pic"><img src="../img/bike-handlebar.jpg" alt="Cockpit detail"></div>
+    <div class="txt">
+      <span class="num">01</span>
+      <h2>The Silent Drive</h2>
+      <p>A mid-mounted motor tuned for smooth, whisper-quiet assistance, paired with a low-maintenance drivetrain built for daily miles. Arrive fresh, not flustered.</p>
+      <details class="more">
+        <summary><span class="switch"></span>Technical details</summary>
+        <dl>
+          <dt>Torque</dt><dd>70 Nm</dd>
+          <dt>Gearing</dt><dd>8-speed, sealed bearings</dd>
+          <dt>Range</dt><dd>Up to 110 km</dd>
+          <dt>Charge</dt><dd>4 h to full</dd>
+        </dl>
+      </details>
+    </div>
+  </section>
+
+  <section class="explode">
+    <div class="explode-head">
+      <h2>Every part, reconsidered.</h2>
+      <p>Tap a point to take a closer look.</p>
+    </div>
+    <div class="stage" id="stage">
+      <div class="stage-img">
+        <img src="../img/bike-street.jpg" alt="SOLENNE bike on a city street">
+        <button class="hot on" style="left:40%;top:30%" data-p="0">+</button>
+        <button class="hot" style="left:47%;top:61%" data-p="1">+</button>
+        <button class="hot" style="left:74%;top:66%" data-p="2">+</button>
+      </div>
+      <div class="pop on" style="left:calc(40% + 34px);top:calc(30% - 20px)"><b>Hand-welded frame</b><span>Smooth-welded aluminium with internal cable routing. Clean lines, nothing to catch or rattle.</span></div>
+      <div class="pop" style="left:calc(47% + 34px);top:calc(61% - 20px)"><b>Precision crankset</b><span>Machined alloy cranks on sealed bearings, tuned to run smoothly and quietly for years.</span></div>
+      <div class="pop" style="left:calc(74% - 314px);top:calc(66% - 20px)"><b>Integrated lights</b><span>Front and rear lights powered by the main battery switch on automatically at dusk.</span></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <img src="../img/road-sunset.jpg" alt="Open road at sunset">
+    <div>
+      <h2>Built for every season.</h2>
+      <p>Mudguards, lights and a rear rack, integrated from day one.</p>
+    </div>
+  </section>
+
+  <section class="chapter rev light">
+    <div class="pic"><img src="../img/bike-lane.jpg" alt="Handlebar over a bike lane marking"></div>
+    <div class="txt">
+      <span class="num">02</span>
+      <h2>Your ride, your way</h2>
+      <p>Three frame heights and an adjustable stem let you dial in a relaxed, upright posture for the daily commute.</p>
+      <details class="more">
+        <summary><span class="switch"></span>Fit details</summary>
+        <dl>
+          <dt>Frame sizes</dt><dd>S · M · L</dd>
+          <dt>Rider height</dt><dd>155 – 200 cm</dd>
+          <dt>Max load</dt><dd>130 kg</dd>
+          <dt>Weight</dt><dd>22 kg</dd>
+        </dl>
+      </details>
+    </div>
+  </section>
+
+  <footer class="ft">
+    <div class="wrap">
+      <div><a class="logo" href="#">SOLENNE</a>
+        <p style="margin-top:10px">© 2026 SOLENNE. Fictional brand for demo purposes.</p>
+      </div>
+      <p>Privacy · Terms · Cookie preferences · Dealers</p>
+    </div>
+  </footer>
+
+  <a href="#" class="ride" onclick="event.preventDefault();toast('Pick a date and a showroom for your demo ride')">Book a demo ride</a>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <div class="box">
+      <button class="x" id="close" aria-label="Close">×</button>
+      <h3 id="m-title">Select your <span>region</span></h3>
+      <p>Prices, taxes and delivery options are shown for the region you choose.</p>
+      <input id="q" placeholder="Search country" aria-label="Search country">
+      <ul class="list" id="list"></ul>
+      <small>* We don't deliver here yet. Choose it and we'll point you to an authorised partner nearby.</small>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <div class="concept">概念演示 · SOLENNE 为虚构品牌<a href="../../works/project-b.html">返回作品集 →</a></div>
+
+  <script>
+    const $ = s => document.querySelector(s);
+    const C = [
+      ['United States', 'USD $', ['#b22234', '#fff', '#3c3b6e'], 1], ['United Kingdom', 'GBP £', ['#012169', '#fff', '#c8102e'], 1],
+      ['Germany', 'EUR €', ['#000', '#dd0000', '#ffce00'], 1], ['France', 'EUR €', ['#0055a4', '#fff', '#ef4135'], 1],
+      ['Netherlands', 'EUR €', ['#ae1c28', '#fff', '#21468b'], 1], ['Sweden', 'SEK kr', ['#006aa7', '#fecc00', '#006aa7'], 1],
+      ['Denmark', 'DKK kr', ['#c8102e', '#fff', '#c8102e'], 1], ['Ireland', 'EUR €', ['#169b62', '#fff', '#ff883e'], 1],
+      ['Norway', 'GBP £', ['#ba0c2f', '#fff', '#00205b'], 0], ['Switzerland', 'GBP £', ['#d52b1e', '#fff', '#d52b1e'], 0],
+      ['Australia', 'USD $', ['#012169', '#fff', '#e4002b'], 0], ['Japan', 'USD $', ['#fff', '#bc002d', '#fff'], 0],
+    ];
+    let current = 'United States';
+    function render(q = '') {
+      $('#list').innerHTML = C.filter(c => c[0].toLowerCase().includes(q.toLowerCase())).map(([n, cur, f, ok]) =>
+        `<li><button data-n="${n}" data-c="${cur}" data-ok="${ok}"><span class="flag" style="background:linear-gradient(180deg,${f[0]} 0 33%,${f[1]} 33% 66%,${f[2]} 66%)"></span><span class="${ok ? '' : 'na'}">${n}${ok ? '' : ' *'}</span><span class="cur">${cur}</span><span class="ok">${n === current ? '✓' : ''}</span></button></li>`).join('');
+      $('#list').querySelectorAll('button').forEach(b => b.onclick = () => {
+        if (b.dataset.ok === '0') { toast('We don\'t deliver to ' + b.dataset.n + ' yet. Showing authorised partners.'); return; }
+        current = b.dataset.n; $('#cur').textContent = b.dataset.c; closeM(); toast('Region set to ' + current + ' · prices in ' + b.dataset.c);
+      });
+    }
+    const openM = () => { render($('#q').value = ''); $('#modal').classList.add('on'); };
+    const closeM = () => $('#modal').classList.remove('on');
+    $('#shop-btn').onclick = openM; $('#close').onclick = closeM;
+    $('#modal').onclick = e => { if (e.target.id === 'modal') closeM(); };
+    $('#q').oninput = e => render(e.target.value);
+
+    const T = {
+      en: ['Made for the way cities move.', 'Quiet power, <em>beautifully</em> made.'],
+      de: ['Gemacht für die Bewegung der Stadt.', 'Leise Kraft, <em>schön</em> gebaut.'],
+      fr: ['Pensé pour le rythme de la ville.', 'Une force silencieuse, <em>joliment</em> conçue.'],
+      nl: ['Gemaakt voor hoe steden bewegen.', 'Stille kracht, <em>prachtig</em> gemaakt.'],
+      sv: ['Skapad för stadens rörelse.', 'Tyst kraft, <em>vackert</em> byggd.'],
+    };
+    $('#lang-btn').onclick = () => $('#lang').classList.toggle('open');
+    document.querySelectorAll('[data-l]').forEach(b => b.onclick = () => {
+      document.querySelectorAll('[data-l]').forEach(x => x.classList.toggle('on', x === b));
+      const [k, t] = T[b.dataset.l];
+      $('[data-i=kick]').textContent = k; $('[data-i=title]').innerHTML = t;
+      $('#lang-btn').textContent = b.dataset.l.toUpperCase() + ' ▾';
+      $('#lang').classList.remove('open');
+    });
+
+    const hots = document.querySelectorAll('.hot'), pops = document.querySelectorAll('.pop');
+    hots.forEach(h => h.onclick = () => {
+      hots.forEach(x => x.classList.toggle('on', x === h));
+      pops.forEach((p, i) => p.classList.toggle('on', i === +h.dataset.p));
+    });
+
+    addEventListener('scroll', () => $('#hd').classList.toggle('solid', scrollY > 60));
+    function toast(msg) {
+      const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+      clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2400);
+    }
+    if (location.hash === '#store') openM();
+  </script>
+</body>
+
+</html>

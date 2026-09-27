@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>ORVIK Electric Bikes — Concept Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="orvik.css">
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h11l2-8H6.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="19.5" r="1.5" fill="currentColor"/><circle cx="17" cy="19.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="6" cy="18" r="2" fill="#fff" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="18" r="2" fill="#fff" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-return" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7M4 4v4h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2.5 10h19" stroke="currentColor" stroke-width="1.8"/></symbol>
+  </svg>
+
+  <div class="promo">
+    <div class="wrap">
+      <button aria-label="Previous offer" data-promo="-1">←</button>
+      <span id="promo-text">FALL RIDE EVENT · <b>$300 OFF</b> METRO 3 THIS WEEK</span>
+      <button aria-label="Next offer" data-promo="1">→</button>
+    </div>
+  </div>
+
+  <header class="hd">
+    <div class="wrap">
+      <button class="burger" aria-label="Menu"><svg width="24" height="24"><use href="#i-menu"/></svg></button>
+      <a href="index.html" class="logo">ORV<i>I</i>K</a>
+      <ul class="menu">
+        <li>
+          <a href="#">E-Bikes ▾</a>
+          <div class="mega">
+            <a href="product.html"><img src="../img/city-rider.jpg" alt="">City<small>Metro 3 · from $1,799</small></a>
+            <a href="product.html"><img src="../img/forest-trail.jpg" alt="">Trail<small>Ridge X · from $2,899</small></a>
+            <a href="product.html"><img src="../img/bike-flowers.jpg" alt="">Cruiser<small>Coast · from $1,599</small></a>
+            <a href="product.html"><img src="../img/bike-street.jpg" alt="">Commuter<small>Line 2 · from $1,399</small></a>
+          </div>
+        </li>
+        <li><a href="#">Accessories ▾</a></li>
+        <li><a href="#tech">Ride Tech</a></li>
+        <li><a href="#stores">Find a Store</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <div class="tools">
+        <a href="#" aria-label="Search"><svg><use href="#i-search"/></svg></a>
+        <a href="#" class="acct" aria-label="Account"><svg><use href="#i-user"/></svg></a>
+        <a href="#" class="cart" aria-label="Cart"><svg><use href="#i-cart"/></svg><em>0</em></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-in">
+      <img src="../img/rider-road.jpg" alt="Rider on an open road at golden hour">
+      <div class="hero-copy">
+        <span class="tag">NEW · METRO 3</span>
+        <h1>Ride further.<br>Worry less.</h1>
+        <p>Up to 60 miles on a single charge, a torque sensor that feels like you, and a frame built for everyday roads.</p>
+        <div class="row">
+          <a href="product.html" class="btn btn-light">Shop Metro 3</a>
+          <a href="#" class="btn btn-ghost">▶ Watch the film</a>
+        </div>
+      </div>
+      <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="kicker">Shop by ride</span>
+          <h2 class="h2">Where are you headed?</h2>
+        </div>
+        <a href="product.html">View all e-bikes</a>
+      </div>
+      <div class="cats">
+        <a class="cat" href="product.html"><img src="../img/city-rider.jpg" alt=""><div><b>City</b><span>Stop-and-go, all day</span></div></a>
+        <a class="cat" href="product.html"><img src="../img/forest-trail.jpg" alt=""><div><b>Trail</b><span>Dirt, gravel, roots</span></div></a>
+        <a class="cat" href="product.html"><img src="../img/bike-flowers.jpg" alt=""><div><b>Cruiser</b><span>Upright and easy</span></div></a>
+        <a class="cat" href="product.html"><img src="../img/bike-street.jpg" alt=""><div><b>Commuter</b><span>Light, quick, practical</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-soft">
+    <div class="wrap feature">
+      <div class="pic"><img src="../img/bike-brick.jpg" alt="Metro 3 e-bike"></div>
+      <div>
+        <span class="kicker">Best seller</span>
+        <h2 class="h2">Metro 3</h2>
+        <p class="lead">Our most versatile e-bike. Integrated battery, hydraulic brakes and a step-over frame that fits riders from 5'2" to 6'4".</p>
+        <div class="specs">
+          <div><b>60 mi</b><span>Max range</span></div>
+          <div><b>28 mph</b><span>Top speed · Class 3</span></div>
+          <div><b>65 lb</b><span>Total weight</span></div>
+        </div>
+        <div class="price-line"><b>$1,799</b><span>or from $75/mo with financing</span></div>
+        <a href="product.html" class="btn btn-dark">Build yours</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="tech">
+    <div class="wrap tabs">
+      <div>
+        <span class="kicker">Ride tech</span>
+        <h2 class="h2">Smart where it counts.</h2>
+        <div class="tab-btns" role="tablist">
+          <button class="on" data-tab="0">Motor</button>
+          <button data-tab="1">Display</button>
+          <button data-tab="2">App</button>
+        </div>
+        <div class="tab-panel on">
+          <h3>Torque-sensing drive</h3>
+          <p>Power follows your pedal pressure, so hills feel flatter without the lurch of a cadence sensor.</p>
+          <ul><li>750W peak, 85 Nm torque</li><li>Five assist levels plus walk mode</li></ul>
+        </div>
+        <div class="tab-panel">
+          <h3>Glare-free color display</h3>
+          <p>Speed, battery and range at a glance, readable in full sun and dimmable at night.</p>
+          <ul><li>Auto brightness</li><li>Turn-by-turn from your phone</li></ul>
+        </div>
+        <div class="tab-panel">
+          <h3>ORVIK Ride app</h3>
+          <p>Lock your bike, tune assist levels and get firmware updates over the air.</p>
+          <ul><li>GPS location and motion alerts</li><li>Ride history and CO₂ saved</li></ul>
+        </div>
+      </div>
+      <div class="pic"><img src="../img/bike-handlebar.jpg" alt="Handlebar and cockpit detail"></div>
+    </div>
+  </section>
+
+  <section class="sec sec-soft">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="kicker">Rider reviews</span>
+          <h2 class="h2">4.8 out of 5, from 3,400+ riders</h2>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="review"><div class="stars">★★★★★</div><p>"Replaced my car for the school run and groceries. The range is honestly better than advertised."</p><small><b>Maya R.</b> · Portland, OR · Metro 3</small></div>
+        <div class="review"><div class="stars">★★★★★</div><p>"Assembly took 20 minutes and the local shop did a free tune-up. Couldn't be happier."</p><small><b>Daniel K.</b> · Austin, TX · Line 2</small></div>
+        <div class="review"><div class="stars">★★★★☆</div><p>"Climbs like a goat on the fire roads. I'd love a bigger rear rack option, but the ride is superb."</p><small><b>Priya S.</b> · Boulder, CO · Ridge X</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="stores">
+    <div class="wrap">
+      <div class="locator">
+        <img src="../img/city-sunrise.jpg" alt="City street at sunrise">
+        <div>
+          <span class="kicker" style="color:#fff">Try before you buy</span>
+          <h2>Test ride at one of 800+ partner shops</h2>
+          <p>Free test rides, pro assembly and service near you.</p>
+          <form class="zip" onsubmit="event.preventDefault();toast('Showing 12 shops near ' + (this.z.value || 'you'))">
+            <input name="z" placeholder="Enter ZIP code" inputmode="numeric" aria-label="ZIP code">
+            <button class="btn btn-accent" style="height:44px">Find a shop</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="wrap perks">
+      <div class="perk"><svg><use href="#i-shield"/></svg><div><b>2-year warranty</b><span>Lifetime on the frame</span></div></div>
+      <div class="perk"><svg><use href="#i-truck"/></svg><div><b>Free shipping</b><span>On orders over $100</span></div></div>
+      <div class="perk"><svg><use href="#i-return"/></svg><div><b>30-day returns</b><span>Ride it, love it, or return it</span></div></div>
+      <div class="perk"><svg><use href="#i-card"/></svg><div><b>0% APR financing</b><span>From $75/mo for 24 months</span></div></div>
+    </div>
+  </section>
+
+  <footer class="ft">
+    <div class="wrap">
+      <div class="ft-top">
+        <div>
+          <a class="logo" href="#">ORV<i>I</i>K</a>
+          <p style="margin-top:14px;max-width:320px">Get ride guides, early access to launches and members-only offers.</p>
+          <form class="news" onsubmit="event.preventDefault();toast('Thanks! Check your inbox.')"><input placeholder="Email address" aria-label="Email"><button>Sign up →</button></form>
+        </div>
+        <div><h4>Shop</h4><ul><li>E-Bikes</li><li>Accessories</li><li>Gift cards</li><li>Financing</li></ul></div>
+        <div><h4>Support</h4><ul><li>Order status</li><li>Shipping</li><li>Returns</li><li>Warranty</li></ul></div>
+        <div><h4>Company</h4><ul><li>About</li><li>Find a store</li><li>Become a dealer</li><li>Press</li></ul></div>
+      </div>
+      <div class="ft-bot"><span>© 2026 ORVIK Electric Bikes. Fictional brand for demo purposes.</span><span>Privacy · Terms · Accessibility · Cookie settings</span></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <div class="concept">概念演示 · ORVIK 为虚构品牌<a href="../../works/project-a.html">返回作品集 →</a></div>
+
+  <script>
+    const promos = ['FALL RIDE EVENT · <b>$300 OFF</b> METRO 3 THIS WEEK', 'FREE SHIPPING ON ORDERS OVER <b>$100</b>', '0% APR FINANCING · FROM <b>$75/MO</b>'];
+    let pi = 0;
+    document.querySelectorAll('[data-promo]').forEach(b => b.onclick = () => {
+      pi = (pi + +b.dataset.promo + promos.length) % promos.length;
+      document.getElementById('promo-text').innerHTML = promos[pi];
+    });
+    document.querySelectorAll('[data-tab]').forEach(b => b.onclick = () => {
+      document.querySelectorAll('[data-tab]').forEach(x => x.classList.toggle('on', x === b));
+      document.querySelectorAll('.tab-panel').forEach((p, i) => p.classList.toggle('on', i === +b.dataset.tab));
+    });
+    function toast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg; t.classList.add('show');
+      clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2200);
+    }
+  </script>
+</body>
+
+</html>
